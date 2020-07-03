@@ -19,15 +19,15 @@ header {
   margin: auto;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-}
-
-.header-top::after {
+clearfix::after {
   content:"";
   display: table;
   clear: both;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
 }
 
 /*navigazione sx*/
@@ -43,40 +43,44 @@ body {
 
 .header-top-logo img {
   vertical-align: middle;
+  margin-bottom: 10px;
+}
+
+.header-top li a {
+  color: #fff;
+  list-style: none;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .header-nav-left {
   float: left;
   width: 45%;
   padding-top: 5px;
-  list-style: none;
   }
 
-.header-nav-left li {
+.menu-inline li {
   display: inline-block;
   margin-left: 10px;
   line-height: 60px;
   font-size: 14px;
-  text-decoration: none;
-  text-transform: uppercase;
 }
 /*navigazione dx*/
 .header-nav-right {
-  float: right;
+  float: left;
   width: 40%;
   padding-top: 5px;
   color: #fff;
+  text-align: right;
 }
 
-.header-nav-right li {
+.header-nav-right li{
   display: inline-block;
-  list-style: none;
-  color: #fff;
-  font-size: 14px;
   text-align: right;
-  text-decoration: none;
-  text-transform: uppercase;
+  font-size: 14px;
+  padding: 0 10px;
 }
+
 
 .btn {
   color: #fff;
@@ -107,11 +111,58 @@ body {
 .banner-text {
   position: absolute;
   top: 50%;
-  left:0;
+  width: 50%;
   transform: translateY(-50%);
   color: #fff;
+  text-align: left;
 }
 
 .banner-text h1{
   font-size: 35px;
+  margin-left: -25%;
+}
+
+.banner button {
+  margin-left: -25%;
+}
+
+/*section*/
+.grey {
+  background-color: #d3d3d3;
+  text-align: center;
+  padding: 20px 0;
+  line-height: 1.8;
+}
+
+.grey h3 {
+  font-size: 30px;
+}
+
+.grey h4 {
+  font-weight: 500;
+  color: #888888;
+}
+
+/*Sezione info*/
+.col-info {
+  width: 33.33%;
+  float: left;
+  text-align: center;
+}
+
+.col-info .info-img {
+  height: 150px;
+  margin-top: 24px;
+}
+
+.info .col-info h3 {
+  color: #7cbb02;
+  font-size: 25px;
+  margin-top: 20px;
+}
+
+.info .col-info hr {
+  display: inline-block;
+  width: 80px;
+  margin: 20px 0;
 }
